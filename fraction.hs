@@ -8,7 +8,7 @@ fraction x n a b c d
  | sigFig x n == sigFig mediant n = b + d
  | x < mediant = fraction x n a b (a + c) (b + d)
  | otherwise = fraction x n (a + c) (b + d) c d
- where mediant = (fromIntegral (a + c)) / (fromIntegral (b + d)) :: Double
+ where mediant = (fromIntegral $ a + c) / (fromIntegral $ b + d) :: Double
 
 sigFig :: Double -> Int -> Double
 sigFig x n
