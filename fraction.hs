@@ -1,6 +1,6 @@
 approx :: Double -> Int -> [Int]
-approx x n = [ceiling $ x * fromIntegral (denominator n), denominator n]
- where denominator n = fraction (x - toEnum (floor x)) n 0 1 1 1
+approx x n = [ceiling $ x * fromIntegral denominator, denominator]
+ where denominator = fraction (x - toEnum (floor x)) n 0 1 1 1
 
 -- returns denominator
 fraction :: Double -> Int -> Int -> Int -> Int -> Int -> Int
