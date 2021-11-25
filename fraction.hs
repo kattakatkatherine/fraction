@@ -10,6 +10,7 @@ fraction x n a b c d
  | otherwise = fraction x n (a + c) (b + d) c d
  where mediant = (fromIntegral $ a + c) / (fromIntegral $ b + d) :: Double
 
+-- reduce to specified digits
 sigFig :: Double -> Int -> Double
 sigFig x n
  | length (show $ x + 1) >= n + 2 = read $ take (n + 2) (show $ x + 1)
